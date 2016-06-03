@@ -8,7 +8,7 @@ import {Meal} from './meal.model';
     <br>
   <hr>
   <div class="Meal-form center">
-    <h3>Log A Meal</h3>
+    <h2 class="font">Log A Meal</h2>
     <input placeholder="Name" class="input-lg form-group font-black" #newName required>
     <br>
     <input placeholder="Details" class="input-lg form-group font-black" #newDetail required>

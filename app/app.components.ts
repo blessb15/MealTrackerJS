@@ -7,7 +7,7 @@ import { MealListComponent } from './meal-list.component';
   directives: [MealListComponent],
   template: `
     <div class="container">
-      <h1 class="center font-white">Meal Tracker</h1>
+      <h1 class="center font-white font">Meal Tracker</h1>
       <hr>
       <meal-list [meals] = "meals" (onMealSelect)="mealWasSelected($event)"></meal-list>
     </div>
@@ -19,8 +19,8 @@ export class AppComponent {
 
   constructor(){
     this.meals = [
-      new Meal("CheeseBurger", "With ketchup,  mayo, tomatos, and a side of fries.", 600, 0),
-      new Meal("Mac & Cheese", "With bbq sauce, and a side of fries.", 600, 1)
+      new Meal("Cheeseburger", "lettuce, mayo, tomatos, ketchup and a side of fries.", 600, 0),
+      new Meal("Mac & Cheese","homemade with cheddar, mozzarella, and parmesian cheese", 520, 1)
     ];
   }
 

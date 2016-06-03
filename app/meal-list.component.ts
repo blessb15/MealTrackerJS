@@ -10,19 +10,16 @@ import { MealPipe } from './meal.pipe';
   directives: [NewMealComponent],
   pipes: [MealPipe],
   template:`
-  <div class="container center font-white">
-    <h2>Meals:</h2>
-    <h5 for="selector">Filter Results</h5>
+  <div class="center font-white">
     <select class="selector font-black" (change)="onChange($event.target.value) && highCal(meal)">
       <option value="All">Show All</option>
       <option value="lowCal">Show Low Calorie</option>
       <option value="notLowCal">Show High Calorie</option>
     </select>
     <br>
-    <br>
     <div *ngFor="#meal of meals | lowCal:filterMeal">
       <h3 (click)="mealClicked(meal)"  [class.selected]="selectedMeal === meal">{{ meal.name }}</h3>
-       <div *ngIf="selectedMeal === meal && show === true">
+       <div *ngIf="selectedMeal === meal && show === true" class="box">
          <h4>Details: {{ meal.detail }}</h4>
          <h4>Calories: {{ meal.calorie }}</h4>
        </div>
