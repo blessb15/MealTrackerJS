@@ -3,11 +3,18 @@
 }
 
 body{
-  color: white;
   margin: auto;
   background-image: url('http://springhappenings.com/wp-content/uploads/2014/09/crsrxfllostehmuxwzqfkdarpcg0di40toehyl4mzmgrkmy3dpfzxttukvsmluvp-o.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.font-black{
+  color: black;
+}
+
+.font-white{
+  color: white;
 }

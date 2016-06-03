@@ -7,7 +7,7 @@ import { MealListComponent } from './meal-list.component';
   directives: [MealListComponent],
   template: `
     <div class="container">
-      <h1 class="center">Meal Tracker</h1>
+      <h1 class="center font-white">Meal Tracker</h1>
       <hr>
       <meal-list [meals] = "meals" (onMealSelect)="mealWasSelected($event)"></meal-list>
     </div>

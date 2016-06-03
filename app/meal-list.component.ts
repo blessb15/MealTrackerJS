@@ -8,9 +8,8 @@ import { NewMealComponent } from './new-meal.component';
   outputs: ['onMealSelect'],
   directives: [NewMealComponent],
   template:`
-  <div class="container center">
+  <div class="container center font-white">
     <h2>Meals:</h2>
-    <br>
     <div *ngFor="#meal of meals">
       <h3 (click)="mealClicked(meal)" [class.selected]="selectedMeal === meal">{{ meal.name }}</h3>
        <div *ngIf="selectedMeal === meal && show === true">
@@ -34,6 +33,10 @@ export class MealListComponent {
 
   constructor() {
     this.onMealSelect = new EventEmitter();
+  }
+
+  createMeal(newMeal: Meal): void {
+    this.meals.push(newMeal);
   }
 
   mealClicked(meal: Meal): void {
