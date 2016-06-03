@@ -29,8 +29,8 @@ body{
   border: 10px;
   border-radius: 3px;
   background-color: rgba(92, 184, 92, 0.56);
-  margin-left: 370;
-  margin-right: 370;
+  margin: auto +200;
+
   padding: 5;
   color: #FBF2F2;
   text-shadow: -1px 1px 3px black;
