@@ -18,7 +18,7 @@ export class EditMealDetailsComponent {
   public meal: Meal;
 
   checkCalories(){
-    if (this.meal.calorie <= 500){
+    if (this.meal.calorie < 500){
       this.meal.lowCal = true;
     } else {
       this.meal.lowCal = false;
