@@ -19,8 +19,8 @@ export class AppComponent {
 
   constructor(){
     this.meals = [
-      new Meal("CheeseBurger", "With ketchup,  mayo, tomatos, and a side of fries.", 500, 0),
-      new Meal("Mac & Cheese", "With bbq sauce, and a side of fries.", 300, 1)
+      new Meal("CheeseBurger", "With ketchup,  mayo, tomatos, and a side of fries.", 600, 0),
+      new Meal("Mac & Cheese", "With bbq sauce, and a side of fries.", 600, 1)
     ];
   }
 

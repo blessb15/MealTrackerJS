@@ -5,16 +5,20 @@ import {Meal} from './meal.model';
   selector: 'new-meal',
   outputs: ['onSubmitNewMeal'],
   template: `
+    <br>
   <hr>
   <div class="Meal-form center">
     <h3>Log A Meal</h3>
     <input placeholder="Name" class="input-lg form-group font-black" #newName required>
+    <br>
     <input placeholder="Details" class="input-lg form-group font-black" #newDetail required>
+    <br>
     <input placeholder="Calories" class="input-lg form-group font-black" #newCalorie required>
     <br>
     <br>
   <button (click)="addMeal(newName, newDetail, newCalorie)" class="btn btn-success">Add</button>
   </div>
+  <br>
   `
 })
 
