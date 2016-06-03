@@ -11,13 +11,11 @@ import { NewMealComponent } from './new-meal.component';
   <div class="container center">
     <h2>Meals:</h2>
     <br>
-    <br>
     <div *ngFor="#meal of meals">
       <h3 (click)="mealClicked(meal)" [class.selected]="selectedMeal === meal">{{ meal.name }}</h3>
-       <div *ngIf="selectedKeg === meal && show === true">
-         <h5>Details: {{ meal.brand }}</h5>
-         <h5>Calories: {{ meal.price }} dollars</h5>
-         <br>
+       <div *ngIf="selectedMeal === meal && show === true">
+         <h5>Details: {{ meal.detail }}</h5>
+         <h5>Calories: {{ meal.calorie }}</h5>
        </div>
     </div>
       <div>
@@ -32,7 +30,7 @@ export class MealListComponent {
   public meals: Meal[];
   public selectedMeal: Meal;
   public onMealSelect: EventEmitter<Meal>;
-  public show: boolean;
+  public show: boolean = false;
 
   constructor() {
     this.onMealSelect = new EventEmitter();
@@ -42,10 +40,11 @@ export class MealListComponent {
     this.selectedMeal = meal;
     this.onMealSelect.emit(meal);
     if (this.show === false) {
-      this.show === true;
+      this.show = true;
     } else {
-      this.show === false;
+      this.show = false;
     }
+    console.log(this.show);
   }
 
 

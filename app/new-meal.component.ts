@@ -13,16 +13,18 @@ import {Meal} from './meal.model';
     <input placeholder="Calories" class="input-lg" #newCalorie required>
     <br>
     <br>
-  <button (click)="addMeal(newName, newDetail, newCalorie, newAlcohol)" class="btn btn-success">Add</button>
+  <button (click)="addMeal(newName, newDetail, newCalorie, 0)" class="btn btn-success">Add</button>
   </div>
   `
 })
+
 export class NewMealComponent {
   public onSubmitNewMeal: EventEmitter<Meal>;
+
   constructor(){
     this.onSubmitNewMeal = new EventEmitter();
   }
-  
+
   addMeal(userName: HTMLInputElement, userDetail: HTMLInputElement, userCalorie: HTMLInputElement){
     var Meal = new Meal(userName.value, userDetail.value, userCalorie.value);
     this.onSubmitNewMeal.emit(Meal);
