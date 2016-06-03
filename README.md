@@ -1,6 +1,6 @@
 # MealTrackerJS
 
-Page where you can track your meals, and keep up on you calorie intake.
+Page where you can track your meals, and keep up on your calorie intake.
 
 ## Setup Instructions
 
