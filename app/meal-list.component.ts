@@ -42,7 +42,7 @@ export class MealListComponent {
   public meals: Meal[];
   public selectedMeal: Meal;
   public onMealSelect: EventEmitter<Meal>;
-  public filterMeal: string = "notLowCal"
+  public filterMeal: string = "All";
   public show: boolean = false;
 
   constructor() {
